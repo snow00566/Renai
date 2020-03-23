@@ -1,0 +1,59 @@
+{template "public","header"}
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+    <!-- 焦点图 -->
+    <div class="banner_public w100">
+        <img src="{IMG_PATH}hua-img/contact_banner.jpg">
+            <h2 class="w1200">
+                <span>联系我们</span>
+                <p><a href="/">首页</a><em>&gt;</em><a href="##">{$CATEGORYS[$catid][catname]}</a></p>
+            </h2>
+    </div>
+    <!-- 二级导航 -->
+    <div class="w100">
+        <div class="w1200 dh_lst">
+             {pc:content action="category" catid="$parentid" num="25" siteid="$siteid" order="listorder ASC"}
+            <ul class="clearfix">
+                {loop $data $r}
+                    <li {if $catid==$r[catid]} class="dh_lis"{/if}><a href="{$r[url]}" >{$r[catname]}</a></li>
+                {/loop}
+            </ul>
+            {/pc}
+        </div>
+    </div>
+    <div class="m-content w100 clearfix bg-h">
+    <h1>联系我们</h1>
+        <div class="w1200 m_us">
+            <dl>
+                <dt>河北仁爱医养服务集团有限公司/新华区仁爱老年公寓</dt>
+                <dd>地址：石家庄市友谊北大街302号</dd>
+                <dd>乘车路线：乘34、58、62、到钟家庄下车沿友谊北大街北行500米路西钟宏路西行100米即到</dd>
+                <dd>咨询电话：0311—88888155</dd>
+                <dt>石家庄市桥西区联谊老年公寓</dt>
+                <dd>地址：石家庄市友谊南大街97号</dd>
+                <dd>乘车路线：乘15、58、62、368到长青路口下车沿友谊南大街南行50米路东即到;乘10、19、317路到益友百货下车沿友谊南大街北行100米路东即到</dd>
+                <dd>咨询电话：0311—88888155</dd>
+                <dt>长安区枫叶老年公寓</dt>
+                <dd>乘车路线：1环1路环线、1环2路环线、101路、102路、21路、23路、37路、4路、5路、7路、快7路、85路、95路自由港、石府二区(和平路北口)、下车即到</dd>
+                <dd>咨询电话：0311—88888155</dd>
+                <dt>新华区银龄老年公寓</dt>
+                <dd>地址：石家庄市新华区大安舍惠中街18号院</dd>
+                <dd>咨询电话：0311—88888155</dd>
+                <dt>鹿泉区仁爱老年公寓</dt>
+                <dd>乘车线路：乘坐322路或快322路南白沙东口下车东行(李村镇政府方向)200米即到。</dd>
+                <dd>自驾车路线：北二环一直走到石清路再向西至百尺杆往西二公里向西北方向即到。</dd>
+                <dd>咨询电话：0311—88888155</dd>
+                <dt>藁城区佳林养老院</dt>
+                <dd>乘车线路：乘坐516路或519、536路直达佳林养老院。</dd>
+                <dd>咨询电话：0311—88888155</dd>
+                <dt>仁爱·新乐市养护院</dt>
+                <dd> 地址：新乐市民政事业服务中心，协神乡政府对面（偏东）</dd>
+                <dd>咨询电话：0311—88888155</dd>
+                <dt>藁城盛德老年公寓</dt>
+                <dd> 地址:藁城区平安西路6号</dd>
+                <dd>咨询电话：0311—88888155</dd>
+            </dl>
+            <div id="dituContent"></div>
+        </div>
+    </div>
+<script src="{JS_PATH}hua-baidu.js"></script>
+{template "public","footer"}

@@ -1,0 +1,49 @@
+{template "public","header"}
+    <!-- 焦点图 -->
+    <div class="banner_public w100">
+        <img src="{IMG_PATH}hua-img/fca62e5e57254a752d6eee1486be5cf1.jpg">
+            <h2 class="w1200">
+                 <span>{$CATEGORYS[$CAT[parentid]][catname]}</span>
+                <p><a href="/">首页</a><em>&gt;</em><a href="##">{$CATEGORYS[$catid][catname]}</a></p>
+            </h2>
+    </div>
+    <!-- 二级导航 -->
+    <div class="w100">
+        <div class="w1200 dh_lst">
+            {pc:content action="category" catid="$parentid" num="25" siteid="$siteid" order="listorder ASC"}
+            <ul class="clearfix">
+             {loop $data $r}
+                <li {if $catid==$r[catid]} class="dh_lis"{/if}><a href="{$r[url]}" >{$r[catname]}</a></li>
+            {/loop}
+            </ul>
+            {/pc}
+        </div>
+    </div>
+    <div class="m-content w100 clearfix bg-h">
+        <div class="w1200">
+            <ul class="news_list">
+                {pc:content action="lists" moreinfo="1" catid="$catid" num="10" order="id DESC" page="$page"}
+                {loop $data $r}
+                <li class="clearfix">
+                    <a href="{$r[url]}">
+                        <div class="news_list_img">
+                            <img src="{$r[thumb]}" alt="">
+                        </div>
+                        <div class="news_list_container">
+                            <h3>{$r[title]}</h3>
+                            <span>{date('Y-m-d',$r[inputtime])}</span>
+                            <p>{$r['description']}</p>
+                        </div>
+                    </a>
+                </li>
+            {/loop}
+            {/pc}
+            </ul>
+
+            <div class="paging clearfix">
+                {$pages}
+            </div>
+        </div>
+    </div>
+
+{template "public","footer"}

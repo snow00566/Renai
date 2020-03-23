@@ -1,0 +1,76 @@
+{template "public","header"}
+    <!-- 焦点图 -->
+    <div class="banner_public w100">
+        <img src="{IMG_PATH}hua-img/contact_banner.jpg">
+            <h2 class="w1200">
+                <span>{$CATEGORYS[$CAT[parentid]][catname]}</span>
+                <p><a href="/">首页</a><em>&gt;</em><a href="##">{$CATEGORYS[$catid][catname]}</a></p>
+            </h2>
+    </div>
+    <!-- 二级导航 -->
+    <div class="w100">
+         <div class="w1200 dh_lst">
+            {pc:content action="category" catid="$parentid" num="25" siteid="$siteid" order="listorder ASC"}
+            <ul class="clearfix">
+             {loop $data $r}
+                <li {if $catid==$r[catid]} class="dh_lis"{/if}><a href="{$r[url]}" >{$r[catname]}</a></li>
+            {/loop}
+            </ul>
+            {/pc}
+        </div>
+    </div>
+    <div class="m-content w100 clearfix bg-h">
+        <h1>加入我们</h1>
+        <div class="w1200 m_merchants">
+            <div class="hr_box">
+                <div class="sideMenu">
+                    <div class="sideMenu_tit">
+                        <h3>一、加入条件</h3>
+                        <span></span>
+                    </div>
+                    <div class="sideMenutext" style="display: none;">
+                        <p>河北仁爱医养服务集团为了大力推广仁爱养老知名养老服务品牌，推进养老产业的发展，尽快占领市场份额，愿和有志于发展养老产业的各界人士加入合作。加入合作条件如下：</p>
+                        <p>1、合作人是自然人，具有独立承担民事行为能力。</p>
+                        <p>2、合作人在合作区域具有开设老年公寓或养老院的能力。</p>
+                        <p>3、所合作的养老场所具备300张以上床位的规模.</p>
+                        <p>4、养老场所交通方便、环境优美，适合老年人居住生活。</p>
+                        <p>5、养老区域社会环境好，能取得政府的支持。</p>
+                        <p>6、联系电话：15383340698（尚总） </p>
+                    </div>
+                </div>
+                <div class="sideMenu">
+                    <div class="sideMenu_tit">
+                        <h3>二、加入流程</h3>
+                        <span></span>
+                    </div>
+                    <div class="sideMenutext"  style="display: none;">
+                        <p>1、加入咨询</p>
+                        <p>2、双方沟通</p>
+                        <p>3、签订加盟意向书</p>
+                        <p>4、双方实地考察</p>
+                        <p>5、商定合作模式</p>
+                        <p>6、签订加入协议</p>
+                        <p>7、统一模式装修养老公寓</p>
+                        <p>8、统一经营管理</p>
+                        <p>9、联系电话：15383340698（尚总） </p>
+                    </div>
+                </div>
+                <div class="sideMenu">
+                    <div class="sideMenu_tit">
+                        <h3>三、加入费用</h3>
+                        <span></span>
+                    </div>
+                    <div class="sideMenutext" style="display: none;">
+                        <p>1、不收取期初加入费用。</p>
+                        <p>2、集团统一标识；统一管理模式。</p>
+                        <p>3、集团统一企划宣传，统一市场营销。</p>
+                        <p>在经营管理中实行收支两条线管理，即所有收入打入双方指定账户，每月25号为结账日，当月所有收入扣除当    月所有费用后，余下利润的5%留存集团，剩余资金转到合作方账户。</p>
+                        <p>4、联系电话：15383340698（尚总） </p>
+                    </div>
+                </div>
+            </div>
+            <div class="null"></div>
+        </div>
+    </div>
+
+{template "public","footer"}

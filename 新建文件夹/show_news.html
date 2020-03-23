@@ -1,0 +1,22 @@
+{template "public","header"}
+    <!-- 焦点图 -->
+    <div class="banner_public w100">
+        <img src="{IMG_PATH}hua-img/fca62e5e57254a752d6eee1486be5cf1.jpg">
+            <h2 class="w1200">
+                 <span>{$CATEGORYS[$CAT[parentid]][catname]}</span>
+                <p><a href="/">首页</a><em>&gt;</em><a href="##">{$CATEGORYS[$catid][catname]}</a></p>
+            </h2>
+    </div>
+
+    <div class="m-content w1200 clearfix">
+        <h1>{$title}</h1>
+        <span style="text-align:center;display: block">{$inputtime}</span>
+        <div class="m_text" style="padding:0 140px;">
+            {$content}
+        </div>
+        <div class="zhaen">
+            <p><a href="{$previous_page[url]}">上一篇：{$previous_page[title]}</a></p>
+            <p><a href="{$next_page[url]}">下一篇：{$next_page[title]}</a></p>
+        </div>
+    </div>
+    {template "public","footer"}

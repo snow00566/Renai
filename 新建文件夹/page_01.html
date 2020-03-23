@@ -1,0 +1,21 @@
+{template "public","header"}
+    <!-- 焦点图 -->
+    <div class="banner_public w100">
+        <img src="{IMG_PATH}hua-img/rrrfa.jpg">
+            <h2 class="w1200">
+                <span>{$CATEGORYS[$catid][catname]}</span>
+                <p><a href="/">首页</a><em>&gt;</em><a href="##">{$CATEGORYS[$catid][catname]}</a></p>
+            </h2>
+    </div>
+
+    <div class="m-content w100 clearfix">
+        <div class="w1200 my_content">
+            <h1>{$title}</h1>
+            <div style="padding:0 150px">
+                {$content}
+            </div>
+
+        </div>
+    </div>
+
+{template "public","footer"}

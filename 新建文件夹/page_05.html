@@ -1,0 +1,39 @@
+{template "public","header"}
+    <!-- 焦点图 -->
+    <div class="banner_public w100">
+        <img src="{IMG_PATH}hua-img/23ac77a41907610566c3a1925177a6f6.jpg">
+            <h2 class="w1200">
+                <span>{$CATEGORYS[$catid][catname]}</span>
+                <p><a href="/">首页</a><em>&gt;</em><a href="##">{$CATEGORYS[$catid][catname]}</a></p>
+            </h2>
+    </div>
+    <!-- 二级导航 -->
+     <div class="w100">
+        <div class="w1200 dh_lst">
+            {pc:content action="category" catid="$parentid" num="25" siteid="$siteid" order="listorder ASC"}
+            <ul class="clearfix">
+             {loop $data $r}
+                <li {if $catid==$r[catid]} class="dh_lis"{/if}><a href="{$r[url]}" >{$r[catname]}</a></li>
+            {/loop}
+            </ul>
+            {/pc}
+        </div>
+    </div>
+    <div class="m-content w100 clearfix">
+        <div class="m_box w1200">
+            <h1>{$title}</h1>
+            <div style="padding:0 140px">
+                 {pc:get sql="select * from v9_form_cgk order by datetime desc"} 
+                 {loop $data $n $r}
+                <dl>
+                <dt style=”float:left”>{$r['comp']}</dt>
+                <dt>{stripslashes($r['cp'])}</dt>
+                
+                {/loop}
+                {/pc}
+            </div>
+
+        </div>
+    </div>
+
+{template "public","footer"}

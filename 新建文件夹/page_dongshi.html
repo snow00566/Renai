@@ -1,0 +1,39 @@
+{template "public","header"}
+    <div class="banner_public w100">
+        <img src="{IMG_PATH}hua-img/rrrfa.jpg">
+            <h2 class="w1200">
+                <span>{$CATEGORYS[$CAT[parentid]][catname]}</span>
+                <p><a href="/">首页</a><em>&gt;</em><a href="##">{$CATEGORYS[$catid][catname]}</a></p>
+            </h2>
+    </div>
+    <!-- 二级导航 -->
+    <div class="w100">
+        <div class="w1200 dh_lst">
+            {pc:content action="category" catid="$parentid" num="25" siteid="$siteid" order="listorder ASC"}
+            <ul class="clearfix">
+             {loop $data $r}
+                <li {if $catid==$r[catid]} class="dh_lis"{/if}><a href="{$r[url]}" >{$r[catname]}</a></li>
+            {/loop}
+            </ul>
+            {/pc}
+        </div>
+    </div>
+    <div class="m-content w1200 clearfix">
+        <div class="clearfix" style="padding:0 140px; margin: 45px 0">
+            <img src="{IMG_PATH}hua-img/fffgggf.jpg" style="float: left">
+            <div class="text-box" style="margin-top: 193px;">
+                <p style="font-size: 16px;color: #000;font-weight: bold;margin-bottom: 10px">武卫东</p>
+                <p style="font-size: 14px;color: #666;margin-bottom: 10px">著名企业家</p>
+                <p style="font-size: 14px;color: #666;margin-bottom: 10px">国内医养融合品质养老先行者</p>
+                <p style="font-size: 14px;color: #666;">"仁爱医养"品牌创始人</p>
+            </div>
+                <p style="font-size: 14px;color: #333333;line-height: 2;margin-top: 30px; float: left;">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1988年毕业于医科大学，河北仁爱医养服务集团有限公司创始人，现任河北仁爱医养服务集团有限公司董事长兼总经理，全国民政行业教指委老年专指委委员、中国生命关怀协会医养融合机构联盟常务委员会副主席、中国社工协会养老专业委员会常务理事、中国社会福利与养老服务协会理事、河北省老年医学会安宁疗护专业委员会副主任、河北省慈善总会常务理事、河北省中老年之友俱乐部理事、河北省人力资源服务行业协会副会长、河北省家政服务协会副会长、河北省养老服务机构星级评定标准专家委员会委员、河北省养老服务机构入住老人健康评估主任委员、河北省大肠肛门病协会常委、石家庄家庭服务协会老年专业委员会主任、石家庄白求恩精神研究会副会长、石家庄家庭服务业协会副会长。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2003年、2004年在《现代中西医结合》杂志先后发表了《肛瘘的现代研究及激光治疗进展》及《激光手术一次性无痛根治肛周脓肿的体会》两篇论文。
+                2014年撰写的《老年人活动策划与组织》被编入“十二五”职业教育国家规划“老年服务与管理专业”教材。同年在中国养老产业和教育联盟、全国民政行指委老年专指委举办的“首届全国养老服务职业教育与产业高端对话活动”发表了题目为《仁爱医养融合的实践与创新》的专题演讲。
+                2015年，参与河北省医学科学研究重点课题【下肢肌肉力量训练在养老机构老年人中的随机对照研究】，发表了论文《基于自我效能理论增强养老机构老年人下肢肌肉力量的干预研究》，（《中国护理管理》2016年第1期）。同年在中国养老产业和教育联盟、全国民政行指委老年专指委举办的“第二届全国养老服务职业教育与产业高端对话活动”发表了题目为《河北仁爱模式：养老机构医养结合和集团化发展模式探索》的专题演讲。<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2017年，主笔撰写的《临床护理协调员在养老机构工作中的应用》发表于中国护理管理大会论文集。同年3月26日在中国生命关怀协会医养融合机构联盟首届会员大会暨全国养老机构院长高峰论坛会上，作了题为《仁爱医养品牌探索，实践与创新》的主题演讲。
+                </p>
+        </div>
+    </div>
+{template "public","footer"}

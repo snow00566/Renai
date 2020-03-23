@@ -1,0 +1,368 @@
+{template "public","header"}
+<style>
+    .centera h1 {
+        font-size: 24px;
+        margin: 25px 0;
+    }
+
+    #oranger a {
+        width: 120px;
+        display: block;
+        color: #373d41;
+        text-decoration: none;
+        display: inline-block;
+        margin: auto;
+    }
+
+    #oranger {
+        position: relative;
+    }
+
+    .purchase-ico {
+        width: 50px;
+        height: 55px;
+        margin: auto;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: .5s all;
+    }
+
+    .purcaes-ico-1 {
+        background-image: url({IMG_PATH}hua-img/sc.png);
+    }
+
+    #oranger .hover .purcaes-ico-1 {
+        background-image: url({IMG_PATH}hua-img/sc_hover.png);
+
+    }
+
+    .purcaes-ico-2 {
+        background-image: url({IMG_PATH}hua-img/yp.png);
+
+    }
+
+    #oranger .hover .purcaes-ico-2 {
+        background-image: url({IMG_PATH}hua-img/yp_hover.png);
+
+    }
+
+    .purcaes-ico-3 {
+        background-image: url({IMG_PATH}hua-img/cp.png);
+    }
+
+    #oranger .hover .purcaes-ico-3 {
+        background-image: url({IMG_PATH}hua-img/cp_hover.png);
+    }
+
+    .purcaes-ico-4 {
+        background-image: url({IMG_PATH}hua-img/shyp.png);
+    }
+
+    #oranger .hover .purcaes-ico-4 {
+        background-image: url({IMG_PATH}hua-img/shyp_hover.png);
+    }
+
+    .purcaes-ico-5 {
+        background-image: url({IMG_PATH}hua-img/wjj.png);
+    }
+
+    #oranger .hover .purcaes-ico-5 {
+        background-image: url({IMG_PATH}hua-img/wjj_hover.png);
+    }
+
+    .purcaes-ico-6 {
+        background-image: url({IMG_PATH}hua-img/bgl.png);
+    }
+
+    #oranger .hover .purcaes-ico-6 {
+        background-image: url({IMG_PATH}hua-img/bgl_hover.png);
+    }
+
+    .purcaes-ico-6 {
+        background-image: url({IMG_PATH}hua-img/bgl.png);
+    }
+
+    #oranger .hover .purcaes-ico-6 {
+        background-image: url({IMG_PATH}hua-img/bgl_hover.png);
+    }
+
+    .purcaes-ico-7 {
+        background-image: url({IMG_PATH}hua-img/jjsh.png);
+    }
+
+    #oranger .hover .purcaes-ico-7 {
+        background-image: url({IMG_PATH}hua-img/jjsh_hover.png);
+    }
+
+    .purcaes-ico-8 {
+        background-image: url({IMG_PATH}hua-img/qt.png);
+    }
+
+    #oranger .hover .purcaes-ico-8 {
+        background-image: url({IMG_PATH}hua-img/qt_hover.png);
+    }
+
+    .centera {
+        max-width: 1000px;
+        min-width: 1000px;
+        overflow: hidden;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .hover {
+        transition: 5s all;
+        display: block;
+    }
+
+    .tablea {
+        background: #f5f5f6;
+        margin-top: 10px;
+    }
+
+    .box {
+        display: none;
+        padding-bottom: 10px;
+
+    }
+
+    .box ul {
+
+        padding: 10px;
+    }
+
+    .box li {
+        float: left;
+        margin-left: 20px;
+        padding: 20px 20px;
+        font-size: 14px;
+        color: #373d41;
+        line-height: 24px;
+        transition: all .3s ease-in-out;
+        box-sizing: border-box;
+
+    }
+
+    .box li:hover {
+        background: #fff;
+        box-shadow: 0 0 8px 0 rgba(0, 0, 0, .15);
+    }
+
+    .purchase-name {
+        font-size: 14px;
+        color: #373d41;
+        line-height: 24px;
+        transition: .5s all;
+    }
+
+    #oranger .hover .purchase-name {
+        color: #00c1de;
+        transition: .5s all;
+    }
+
+    .indicator-triangle {
+        display: block;
+        position: absolute;
+        bottom: -10px;
+        left: 53.421875px;
+        width: 0;
+        height: 0;
+        border-left: 15px solid transparent;
+        border-right: 15px solid transparent;
+        border-bottom: 13px solid #f5f5f6;
+        transition: left .3s linear;
+        text-align: center;
+    }
+
+    .purcaes-title p {
+        text-align: left;
+    }
+
+    .purcaes-title {
+        padding: 26px 0;
+        font-size: 15px;
+    }
+
+    .purcaes-title span {
+        border-bottom: 1px solid #F00;
+        transition: .3s linear;
+    }
+
+    .purcaes-title:hover span {
+        color: #f00;
+        border-bottom: 1px solid #000;
+        transition: .3s linear;
+    }
+
+    .download {
+        text-decoration: none;
+        display: block;
+        width: 150px;
+        height: 36px;
+        line-height: 36px;
+        margin: 10px auto;
+        text-align: center;
+        font-size: 14px;
+        color: #373d41;
+        border: 1px solid #373d41;
+        cursor: pointer;
+
+    }
+
+    .download:hover {
+        color: #00c1de;
+        border: 1px solid #00c1de;
+    }
+
+</style>
+<!-- 焦点图 -->
+<div class="banner_public w100">
+    <img src="{IMG_PATH}hua-img/23ac77a41907610566c3a1925177a6f6.jpg">
+    <h2 class="w1200">
+        <span>{$CATEGORYS[$catid][catname]}</span>
+        <p>
+            <a href="/">首页</a>
+            <em>&gt;</em>
+            <a href="##">{$CATEGORYS[$catid][catname]}</a>
+        </p>
+    </h2>
+</div>
+<!-- 二级导航 -->
+<div class="w100">
+    <div class="w1200 dh_lst">
+        {pc:content action="category" catid="$parentid" num="25" siteid="$siteid" order="listorder ASC"}
+        <ul class="clearfix">
+            {loop $data $r}
+            <li {if $catid==$r[catid]} class="dh_lis" {/if}>
+                <a href="{$r[url]}">{$r[catname]}</a>
+            </li>
+            {/loop}
+        </ul>
+        {/pc}
+    </div>
+</div>
+<div class="centera">
+    <h1>阳光采购专区</h1>
+    <div id="oranger">
+        <a href="javascript:;" class="hove hover">
+            <div class="purchase-ico purcaes-ico-1"></div>
+            <div class="purchase-name">食材类</div>
+        </a>
+        <a href="javascript:;">
+            <div class="purchase-ico purcaes-ico-2"></div>
+            <div class="purchase-name">药品及医疗器械类</div>
+        </a>
+        <a href="javascript:;">
+            <div class="purchase-ico purcaes-ico-3"></div>
+            <div class="purchase-name">适老化产品类</div>
+        </a>
+        <a href="javascript:;">
+            <div class="purchase-ico purcaes-ico-4"></div>
+            <div class="purchase-name">日常生活用品</div>
+        </a>
+        <a href="javascript:;">
+            <div class="purchase-ico purcaes-ico-5"></div>
+            <div class="purchase-name">土产日杂</div>
+        </a>
+        <a href="javascript:;">
+            <div class="purchase-ico purcaes-ico-6"></div>
+            <div class="purchase-name">办公用品类</div>
+        </a>
+        <a href="javascript:;">
+            <div class="purchase-ico purcaes-ico-7"></div>
+            <div class="purchase-name">居家生活</div>
+        </a>
+        <a href="javascript:;">
+            <div class="purchase-ico purcaes-ico-8"></div>
+            <div class="purchase-name">其他</div>
+        </a>
+        <div class="indicator-triangle"></div>
+    </div>
+    <div id="tablea" class="tablea">
+        <div class="box">
+            <ul class="clearfix">
+                <li>日常蔬菜</li>
+                <li>主食（米、面、杂粮、豆类）</li>
+                <li>肉、蛋、奶及副食调料</li>
+                <li>水果、糕点、面包、饼干</li>
+                <li>酒水饮料</li>
+            </ul>
+            <a href="{IMG_PATH}hua-img/物资报价单.xlsx" download="物资供应报价单" class="download">物资供应报价单下载</a>
+        </div>
+        <div class="box">
+            <ul class="clearfix">
+                <li>常用口服药物</li>
+                <li>外用外敷药物</li>
+                <li>注射类药物</li>
+                <li>医用耗材</li>
+                <li>医疗设备器械及医疗床</li>
+            </ul>
+            <a href="{IMG_PATH}hua-img/物资报价单.xlsx" download="物资供应报价单" class="download">物资供应报价单下载</a>
+        </div>
+        <div class="box">
+            <ul class="clearfix">
+                <li>纸尿裤、隔尿垫，防褥疮气垫</li>
+                <li>轮椅、拐杖、尿壶</li>
+            </ul>
+            <a href="{IMG_PATH}hua-img/物资报价单.xlsx" download="物资供应报价单" class="download">物资供应报价单下载</a>
+        </div>
+        <div class="box">
+            <ul class="clearfix">
+                <li>卫生纸、纸巾、湿巾</li>
+                <li>毛巾、香皂、洗衣粉</li>
+                <li>方便面等快餐类食品</li>
+            </ul>
+            <a href="{IMG_PATH}hua-img/物资报价单.xlsx" download="物资供应报价单" class="download">物资供应报价单下载</a>
+        </div>
+        <div class="box">
+            <ul class="clearfix">
+                <li>保洁用具拖把、扫帚、簸箕、垃圾袋等</li>
+                <li>喷头、水龙头、马桶及洗浴零配件等</li>
+                <li>电源插座、开关、节能灯、电池、绝缘胶带等</li>
+                <li>洗洁精、草酸、老鼠药等</li>
+            </ul>
+            <a href="{IMG_PATH}hua-img/物资报价单.xlsx" download="物资供应报价单" class="download">物资供应报价单下载</a>
+        </div>
+        <div class="box">
+            <ul class="clearfix">
+                <li>电脑、电话、打印机、传真机及相关耗材</li>
+                <li>打印纸（普通及彩色）、硒鼓、墨盒、印油</li>
+                <li>文件筐（盒）档案袋、拉杆夹、订书器及其耗材</li>
+            </ul>
+            <a href="{IMG_PATH}hua-img/物资报价单.xlsx" download="物资供应报价单" class="download">物资供应报价单下载</a>
+        </div>
+        <div class="box">
+            <ul class="clearfix">
+                <li>床及床头柜桌椅等生活家具</li>
+                <li>电视、空调、洗衣机、开水器等常用电器</li>
+            </ul>
+            <a href="{IMG_PATH}hua-img/物资报价单.xlsx" download="物资供应报价单" class="download">物资供应报价单下载</a>
+        </div>
+        <div class="box">
+            <ul class="clearfix">
+                <li>与养老运营相关的商品</li>
+            </ul>
+            <a href="{IMG_PATH}hua-img/物资报价单.xlsx" download="物资供应报价单" class="download">物资供应报价单下载</a>
+        </div>
+    </div>
+    <div class="purcaes-title">
+        <p>发送到：
+            <span>Hebrenaipurchase@163.com</span>
+        </p>
+    </div>
+</div>
+<script>
+    $(function () {
+        $(".tablea").find(".box:first").show();    //为每个BOX的第一个元素显示        
+        $("#oranger a").on("mouseover", function () { //给a标签添加事件  
+            var index = $(this).index();  //获取当前a标签的个数  
+            $(this).parent().next().find(".box").hide().eq(index).show(); //返回上一层，在下面查找css名为box隐藏，然后选中的显示  
+            $(this).addClass("hover").siblings().removeClass("hover"); //a标签显示，同辈元素隐藏  
+            var a = $(this).position().left;
+            var b = $(this).width() / 2;
+            var c = a + b;
+            $(".indicator-triangle").css('left', c - 15 + 'px');
+        });
+    });
+
+</script> {template "public","footer"}

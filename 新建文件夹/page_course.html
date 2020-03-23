@@ -1,0 +1,167 @@
+{template "public","header"}
+<!-- 焦点图 -->
+<div class="banner_public w100">
+    <img src="{IMG_PATH}hua-img/rrrfa.jpg">
+    <h2 class="w1200">
+        <span>{$CATEGORYS[$CAT[parentid]][catname]}</span>
+        <p>
+            <a href="/">首页</a>
+            <em>&gt;</em>
+            <a href="##">{$CATEGORYS[$catid][catname]}</a>
+        </p>
+    </h2>
+</div>
+<!-- 二级导航 -->
+<div class="w100">
+    <div class="w1200 dh_lst">
+        {pc:content action="category" catid="$parentid" num="25" siteid="$siteid" order="listorder ASC"}
+        <ul class="clearfix">
+            {loop $data $r}
+            <li {if $catid==$r[catid]} class="dh_lis" {/if}>
+                <a href="{$r[url]}">{$r[catname]}</a>
+            </li>
+
+            {/loop}
+        </ul>
+        {/pc}
+    </div>
+</div>
+<div class="m-content w1200 clearfix">
+
+    <h5>打造中国医护养老服务产业第一品牌！</h5>
+    <div class="max-box w100 clearfix">
+        <img src="{IMG_PATH}hua-img/sanjiao.png">
+        <div class="fl_f">
+            <img src="{IMG_PATH}hua-img/right.png">
+            <p>2018年</p>
+            <div class="text-ggl">
+                <p>
+                    ·中标阜平县民政事业服务中心
+                </p>
+                <p>
+                    ·成立仁爱佳国际旅行社
+                </p>
+            </div>
+        </div>
+        <div class="fr_r">
+            <img src="{IMG_PATH}hua-img/left_bg.png">
+            <p>2017年</p>
+            <div class="text_gg">
+                <p>
+                    ·中标石家庄市长安区、桥西区、新华区政府购买居家养老服务项目
+                    
+                </p>
+                <p>
+                    ·中标石家庄市桥西区社区养老服务中心项目
+                    
+                <p>
+                    ·中标保定市阜平县龙泉关镇养老服务中心项目
+
+                </p>
+                
+                <p>
+                    ·运营河北二机医院
+                </p>
+                <p>
+                    ·成立四家综合居家养老服务中心
+                </p>
+            </div>
+        </div>
+        <div class="fl_f">
+            <img src="{IMG_PATH}hua-img/right.png">
+            <p>2016年</p>
+            <div class="text-ggl">
+                <p>
+                    ·中标藁城区民政事业服务中心
+                </p>
+                <p>
+                    ·中标石家庄市裕华区、桥西区政府购买居家养老服务项目
+                </p>
+                <p>
+                    ·托管石家庄栾城永青老年公寓
+                </p>
+                <p>
+                    ·成立石家庄仁济护理院
+                </p>
+                <p>
+                    ·成立石家庄市长安区义东社区服务中心
+                </p>
+            </div>
+        </div>
+        <div class="fr_r">
+            <img src="{IMG_PATH}hua-img/left_bg.png">
+            <p>2015年</p>
+            <div class="text_gg">
+                <p>
+                    ·中标新乐市民政事业服务中心
+                </p>
+                <p>
+                    ·成立盛德职业培训学校
+                </p>
+                <p>
+                    ·成立两家法人实体单位
+                </p>
+                <p>
+                    ·成立大厂
+                </p>
+                <p>
+                    ·永安里社区服务中心
+                </p>
+            </div>
+        </div>
+        <div class="fl_f">
+            <img src="{IMG_PATH}hua-img/right.png">
+            <p>2014年</p>
+            <div class="text-ggl">
+                <p>
+                    ·收购藁城区佳林养老院
+                </p>
+                <p>
+                    ·成立新华区仁爱老年公寓
+                </p>
+                <p>
+                    ·成立三家法人实体单位
+                </p>
+            </div>
+        </div>
+        <div class="fr_r">
+            <img src="{IMG_PATH}hua-img/left_bg.png">
+            <p>2012年</p>
+            <div class="text_gg">
+                <p>
+                    ·成立银龄老年公寓
+                </p>
+
+            </div>
+        </div>
+        <div class="fl_f">
+            <img src="{IMG_PATH}hua-img/right.png">
+            <p>2009年</p>
+            <div class="text-ggl">
+                <p>
+                    ·成立鹿泉区仁爱老年公寓
+                </p>
+                <p>
+                    ·托管动力工贸有限责任公司医院
+                </p>
+                <p>
+                    ·成立枫叶老年公寓
+                </p>
+            </div>
+        </div>
+        <div class="fr_r">
+            <img src="{IMG_PATH}hua-img/left_bg.png">
+            <p>2005年</p>
+            <div class="text_gg">
+                <p>
+                    ·收购石家庄联谊医院
+                </p>
+                <p>
+                    ·成立石家庄联谊老年公寓
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{template "public","footer"}
